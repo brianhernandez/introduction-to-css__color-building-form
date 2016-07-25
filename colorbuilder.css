@@ -1,0 +1,67 @@
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Oxygen', sans-serif;
+	font-size: 1.2em;
+}
+
+h1 {
+	text-align: center;
+}
+
+.color_picker {
+	max-width: 500px;
+	padding: 20px;
+	background-color: rgba(255,255,255,.0);
+	margin: 0 auto;
+	position: relative;
+	-webkit-box-shadow: 0 8px 6px -6px black;
+   	-moz-box-shadow: 0 8px 6px -6px black;
+  	box-shadow: 0 8px 6px -6px black;
+  	border: 2px solid #999999;
+  	border-radius: 10px;
+}
+
+label {
+	display: inline-block;
+	width: 100px;
+	margin-bottom: 10px;
+	letter-spacing: 1px;
+	font-weight: 700;
+}
+
+label[for="red_value"] { color: #FF452B; }
+label[for="green_value"] { color: #01A302; }
+label[for="blue_value"] { color: #358AFF; }
+label[for="alpha_value"] { color: #787878; }
+
+#red_value,
+#green_value,
+#blue_value,
+#alpha_value {
+	/*vertical-align: middle;*/
+}
+
+.rgba_value {
+	margin: 0;
+	text-align: right;
+	letter-spacing: 1px;
+	font-size: .9em;
+}
+
+#color_swatch {
+	background-color: rgba(128,128,128,0.5);
+	width: 215px;
+	height: 100%;
+	border: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	/*These should be 3 pixels less than container border radius*/
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Color Builder</title>
+	<link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="colorbuilder.css">
+</head>
+<body>
+	<h1>Color Builder</h1>
+	<div class="color_picker">
+		<label for="red_value">Red </label><input type="range" id="red_value" min="0" max="255" step="5"><br>
+		<label for="green_value">Green </label><input type="range" id="green_value" min="0" max="255" step="5"><br>
+		<label for="blue_value">Blue </label><input type="range" id="blue_value" min="0" max="255" step="5"><br>
+		<label for="alpha_value">Alpha </label><input type="range" id="alpha_value" min="0" max="1" step=".01"><br>
+		<p class="rgba_value">rgba(128,128,128,0.5)</p>
+		<input type="text" id="color_swatch" disabled=”disabled”>
+	</div>
+	
+</body>
+</html>
