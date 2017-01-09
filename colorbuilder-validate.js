@@ -49,4 +49,25 @@ window.onload = function () {
       }
     }
   }
+  // Add a click event listener for the colorFormElement
+  colorFormElement.addEventListener('click', function(event) {
+    // When clicked, obtain the current red, green, blue and alpha range input
+    // values and save them to variables
+    var redValue = document.getElementById('red_value').value;
+    var greenValue = document.getElementById('green_value').value;
+    var blueValue = document.getElementById('blue_value').value;
+    var alphaValue = document.getElementById('alpha_value').value;
+    var swatchColor = document.getElementById('color_swatch');
+    // Also get the p element and save it to a variable
+    var newColorPTag = document.querySelector('.rgba_value');
+    // Create the new rgba color value based on the new range input values
+    // and save it to newColor variable
+    var newColor = "rgba(" + redValue + "," + greenValue +
+      "," + blueValue + "," + alphaValue + ")";
+    // Use the newColor variable as the new contents of the p element in the
+    // color swatch
+    newColorPTag.innerHTML = newColor;
+    // Update the background-color CSS property for the color swatch
+    swatchColor.style.backgroundColor = newColor;
+  });
 };
